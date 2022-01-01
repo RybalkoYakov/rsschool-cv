@@ -60,4 +60,5 @@ My goal is to become a cool front-end engineer.
 
 ### Languages
 * Russian (native)
+* Belarussian (native)
 * English (A2 but intensive study)
