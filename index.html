@@ -10,8 +10,31 @@
   <title>Yakov Rybalko</title>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img  class="logo__theme_switch" src="img/moon_icon.svg" alt="theme">
+      <img  class="logo__theme_switch" src="img/sun_icon.svg" alt="theme">
+
+      <label class="input_switch" for="theme_type">
+        <input class="input_switch__checkbox" type="checkbox" role="switch" name="theme_type" id="theme_type">
+        <span class="input_switch__slider"></span>
+      </label>
 
 
-<script src="scripts/index.js"></script>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">Contacts</li>
+        <li class="navigation__item">About me</li>
+        <li class="navigation__item">Skills</li>
+        <li class="navigation__item">Code example</li>
+        <li class="navigation__item">Education</li>
+        <li class="navigation__item">Experience</li>
+        <li class="navigation__item">Languages</li>
+      </ul>
+    </nav>
+  </header>
+
+  <script src="scripts/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+header {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.logo__theme_switch {
+    width: 5rem
+}
+
+.logo__theme_switch:nth-child(2n) {
+    display: none;
+}
+
+.navigation {
+
+}
+
+.navigation__list {
+    display: flex;
+}
+
+.navigation__item {
+
+}

@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "colors.css";
-@import "media.css";
+@import "global.css";
+@import "components/index.css";
+
 @import "header.css";
-@import "nav_menu.css";
