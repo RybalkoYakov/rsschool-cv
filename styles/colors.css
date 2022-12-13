@@ -1,5 +1,7 @@
 :root {
-    --bacground-main-color: #adadad;
+    --bacground-main-color: #f3f2f3;
     --text-main-color: #7a5f5f;
     --text-secondary-color: #726f4e;
+    --theme-bg-color-dark: #391046;
+    --theme-bg-color-light: #ffffff;
 }

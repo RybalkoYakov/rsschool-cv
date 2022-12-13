@@ -1,4 +1,7 @@
 body {
-    background-color: #f3f2f3;
+    background-color: var(--bacground-main-color);
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
     font-size: 10px;
 }

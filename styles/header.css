@@ -2,16 +2,15 @@ header {
     display: flex;
 }
 
-.logo {
+.theme {
     display: flex;
-    cursor: pointer;
 }
 
-.logo__theme_switch {
-    width: 5rem
+.theme__theme_switch {
+    width: 2rem
 }
 
-.logo__theme_switch:nth-child(2n) {
+.theme__theme_switch:nth-child(2n) {
     display: none;
 }
 
