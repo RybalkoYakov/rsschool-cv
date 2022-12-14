@@ -9,71 +9,112 @@
   <link rel="stylesheet" href="styles/index.css">
   <title>Yakov Rybalko</title>
 </head>
-<body>
-
+<body style="height: 5000px">
   <header>
-    <div class="theme">
-      <img  class="theme__theme_switch" src="assets/img/moon_icon.svg" alt="theme">
-      <img  class="theme__theme_switch" src="assets/img/sun_icon.svg" alt="theme">
+    <div class="header_wrapper">
+      <div class="theme">
+        <img  class="theme__theme_switch" src="assets/img/moon_icon.svg" alt="theme">
+        <img  class="theme__theme_switch" src="assets/img/sun_icon.svg" alt="theme">
 
-      <label class="input_switch" for="theme_type">
-        <input class="input_switch__checkbox" type="checkbox" role="switch" name="theme_type" id="theme_type">
-        <span class="input_switch__slider"></span>
-      </label>
+        <label class="input_switch" for="theme_type">
+          <input class="input_switch__checkbox" type="checkbox" role="switch" name="theme_type" id="theme_type">
+          <span class="input_switch__slider"></span>
+        </label>
+      </div>
+
+      <div class="navigation_burger">
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+      </div>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#">Contacts</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">About me</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Skills</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Code example</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Education</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Experience</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Languages</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="#">Contacts</a></li>
-        <li class="navigation__item"><a href="#">About me</a></li>
-        <li class="navigation__item"><a href="#">Skills</a></li>
-        <li class="navigation__item"><a href="#">Code example</a></li>
-        <li class="navigation__item"><a href="#">Education</a></li>
-        <li class="navigation__item"><a href="#">Experience</a></li>
-        <li class="navigation__item"><a href="#">Languages</a></li>
+    <div class="navigation_burger__expanded">
+      <ul>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Code example</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Language</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <main>
+
     <section>
-      Presentation
+      <h2>Presentation</h2>
     </section>
 
     <section>
-      Contacts
+      <h2>Contacts</h2>
     </section>
 
     <section>
-      About me
+      <h2>About me</h2>
     </section>
 
     <section>
-      Skills
+      <h2>Skills</h2>
     </section>
 
     <section>
-      Code example
+      <h2>Code example</h2>
     </section>
 
     <section>
-      Education
+      <h2>Education</h2>
     </section>
 
     <section>
-      Experience
+      <h2>Experience</h2>
     </section>
 
     <section>
-      Languages
+      <h2>Languages</h2>
     </section>
+
   </main>
-
-
 
   <footer>
     Footer
   </footer>
+
   <script src="scripts/index.js"></script>
 </body>
 </html>

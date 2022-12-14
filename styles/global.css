@@ -1,7 +1,21 @@
+* {
+    background-color: var(--theme-bg-color-dark);
+    color: var(--text-main-color-dark);
+}
+
 body {
-    background-color: var(--bacground-main-color);
+    margin: 0 auto;
+    max-width: 1440px;
+    scroll-behavior: smooth;
+    padding: 0 100px;
     font-family: Roboto, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 10px;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0 30px;
+    }
 }
