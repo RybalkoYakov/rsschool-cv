@@ -19,9 +19,11 @@ header > .header_wrapper {
 
 .theme__theme_switch {
     width: 2rem;
+    color: var(--text-main-color-dark);
+    background-color: transparent;
 }
 
-.theme__theme_switch:nth-child(2n) {
+.theme__theme_switch:nth-child(1) {
     display: none;
 }
 
@@ -70,7 +72,7 @@ header > .header_wrapper {
     transition: all linear 0.2s;
     position: absolute;
     width: 100%;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--text-main-color-dark);
 }
 
 .navigation_burger:hover .navigation_burger__line{

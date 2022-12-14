@@ -1,6 +1,7 @@
 * {
     background-color: var(--theme-bg-color-dark);
     color: var(--text-main-color-dark);
+    text-shadow: 0 0 1px var(--text-main-color-dark);
 }
 
 body {
