@@ -84,7 +84,17 @@ function setTransitionToAllNodes(animationDuration = '0.4s', whichProperty = 'al
   const nodes = document.querySelectorAll('*')
 
   nodes.forEach(value => {
-    value.style.transition = `${whichProperty} ${animationStyle} ${animationDuration}s`;
+    if
+    (
+      value.tagName !== 'META' &&
+      value.tagName !== 'TITLE' &&
+      value.tagName !== 'HEAD' &&
+      value.tagName !== 'LINK'
+    ) {
+      if (value.style.transition === '') {
+        value.style.transition = `${whichProperty} ${animationStyle} ${animationDuration}s`;
+      }
+    }
   })
 }
 
