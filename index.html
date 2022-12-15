@@ -142,10 +142,20 @@
       </div>
     </section>
 
-    <section id="code_example">
+    <section class="code_example" id="code_example">
       <h2>Code example</h2>
-      <code>
+      <h3>Kata "Find missing element between two arrays" from codewars:</h3>
+      <code class="regular_words">
+        <span class="reserved_words">function</span> <span class="deactivated_words">findMissing</span>(arr1<span class="reserved_words">,</span> arr2) {
+          arr1 = arr1.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
+          arr2 = arr2.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
 
+          <span class="reserved_words">for</span> (<span class="reserved_words">let</span> i = <span class="number_words">0</span><span class="reserved_words">;</span> i < arr1.<span class="property_words">length</span><span class="reserved_words">;</span> i++) {
+            <span class="reserved_words">if</span> (arr1[i] !== arr2[i]) {
+              <span class="reserved_words">return</span> arr1[i]
+            }
+          }
+        }
       </code>
     </section>
 
