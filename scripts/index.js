@@ -22,7 +22,7 @@ const SIZES = {
   zero: '0',
   full: '100%',
   fullScreenHeight: '100vh',
-  hideNavigation: 1250,
+  hideNavigation: 1000,
 }
 
 window.onload = function (e) {
@@ -46,10 +46,13 @@ window.addEventListener('pointerdown', (e) => {
     toggleBurgerExpand();
   }
 
-  if (targetClassList.contains('input_switch__slider')) {
+  if (targetClassList?.contains('input_switch__slider')) {
     changeTheme()
   }
 
+  if (targetClassList?.contains('hire_me_btn')) {
+    hireMe()
+  }
 })
 
 function toggleNavigationMenu(hide_bool){
@@ -101,4 +104,8 @@ function changeTheme(){
     header.querySelector('.second').style.display = DISPLAY.block
     STATE.isDarkTheme = true
   }
+}
+
+function hireMe(){
+  window.location.href = "tel:+375292582264"
 }

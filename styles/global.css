@@ -2,17 +2,38 @@
     background-color: var(--theme-bg-color-dark);
     color: var(--text-main-color-dark);
     text-shadow: 0 0 1px var(--text-main-color-dark);
+    scroll-behavior: smooth;
 }
 
 body {
+    user-select: none;
     margin: 0 auto;
     max-width: 1440px;
-    scroll-behavior: smooth;
     padding: 0 100px;
     font-family: Roboto, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 10px;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-main-color-dark);
+    font-size: 2rem;
+    border-bottom: 2px solid #8f4b04;
+    line-height: 3.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--text-main-color-dark);
+    text-align: center;
+    border-bottom: 2px solid #8f4b04;
+    line-height: 3.5rem;
 }
 
 @media (max-width: 800px) {
