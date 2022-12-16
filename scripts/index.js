@@ -8,9 +8,16 @@ const STATE = {
   isDarkTheme: true
 }
 
-const THEME_COLORS_NAMES = {
+const THEME_COLOR_NAMES = {
   bg: '--theme-bg-color-dark',
   text: '--text-main-color-dark',
+}
+
+const TAG_NAMES = {
+  meta: 'META',
+  title: 'TITLE',
+  head: 'HEAD',
+  link: "LINK"
 }
 
 const DISPLAY = {
@@ -25,7 +32,7 @@ const SIZES = {
   hideNavigation: 1000,
 }
 
-window.onload = function (e) {
+window.onload = function () {
   setTransitionToAllNodes(0.4)
 }
 
@@ -41,6 +48,7 @@ window.addEventListener('resize', (e)=>{
 
 window.addEventListener('pointerdown', (e) => {
   const targetClassList = e.target?.classList
+  const targetElement = e.target
 
   if (targetClassList?.contains('navigation_burger') || targetClassList?.contains('navigation_burger__line')) {
     toggleBurgerExpand();
@@ -52,6 +60,11 @@ window.addEventListener('pointerdown', (e) => {
 
   if (targetClassList?.contains('hire_me_btn')) {
     hireMe()
+  }
+
+  if (targetClassList?.contains('hide_onclick')) {
+    window.location.href = targetElement.href
+    toggleBurgerExpand()
   }
 })
 
@@ -86,10 +99,10 @@ function setTransitionToAllNodes(animationDuration = '0.4s', whichProperty = 'al
   nodes.forEach(value => {
     if
     (
-      value.tagName !== 'META' &&
-      value.tagName !== 'TITLE' &&
-      value.tagName !== 'HEAD' &&
-      value.tagName !== 'LINK'
+      value.tagName !== TAG_NAMES.meta &&
+      value.tagName !== TAG_NAMES.title &&
+      value.tagName !== TAG_NAMES.head &&
+      value.tagName !== TAG_NAMES.link
     ) {
       if (value.style.transition === '') {
         value.style.transition = `${whichProperty} ${animationStyle} ${animationDuration}s`;
@@ -102,20 +115,20 @@ function changeTheme(){
   const root = document.querySelector(':root')
 
   if (STATE.isDarkTheme) {
-    root.style.setProperty(THEME_COLORS_NAMES.bg,'#ffffff')
-    root.style.setProperty(THEME_COLORS_NAMES.text,'#000000')
+    root.style.setProperty(THEME_COLOR_NAMES.bg,'#ffffff')
+    root.style.setProperty(THEME_COLOR_NAMES.text,'#000000')
     header.querySelector('.first').style.display = DISPLAY.block
     header.querySelector('.second').style.display = DISPLAY.none
     STATE.isDarkTheme = false
   } else {
-    root.style.setProperty(THEME_COLORS_NAMES.bg,'#000000')
-    root.style.setProperty(THEME_COLORS_NAMES.text,'#ffffff')
+    root.style.setProperty(THEME_COLOR_NAMES.bg,'#000000')
+    root.style.setProperty(THEME_COLOR_NAMES.text,'#ffffff')
     header.querySelector('.first').style.display = DISPLAY.none
     header.querySelector('.second').style.display = DISPLAY.block
     STATE.isDarkTheme = true
   }
 }
 
-function hireMe(){
-  window.location.href = "tel:+375292582264"
+function hireMe() {
+  window.location.href = "mailto:RybalkoYakov@outlook.com"
 }
