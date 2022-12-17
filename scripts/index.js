@@ -2,7 +2,8 @@ const navigationBurger = document.querySelector('.navigation_burger')
 const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
 const navigationBurgerExpanded = document.querySelector('.navigation_burger__expanded')
-const sprite_business = document.querySelector('.experience_content__sprite')
+const sprite_business = document.querySelector('.experience_content__sprite_business')
+const sprite_geodetic = document.querySelector('.experience_content__sprite_geodetic')
 
 
 const STATE = {
@@ -39,7 +40,7 @@ window.onload = function () {
   animate({
     node: sprite_business,
     frames: 18,
-    frameInterval: 40,
+    frameInterval: 50,
     path: 'url(assets/img/businessman/',
     fileNameNoNumber: 'businessman_run_',
     fileExtension: 'png'

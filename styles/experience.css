@@ -7,15 +7,33 @@
 }
 
 .experience_content {
-
+    margin: 4rem 0;
 }
 
-.experience_content {
-
+.experience_content > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.experience_content__sprite {
+.experience_content > ul > li{
+    white-space: nowrap;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.experience_content__sprite_business {
+    margin: 1rem auto;
     width: 111px;
     height: 140px;
+    transform: rotateY(180deg);
     background: url(../assets/img/businessman/businessman_run_01.png) no-repeat 0 0;
+}
+
+@media (max-width: 520px) {
+    .experience_content > ul > li {
+        font-size: 1rem;
+    }
 }
