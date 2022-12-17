@@ -3,7 +3,7 @@ const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
 const navigationBurgerExpanded = document.querySelector('.navigation_burger__expanded')
 const sprite_business = document.querySelector('.experience_content__sprite_business')
-const sprite_geodetic = document.querySelector('.experience_content__sprite_geodetic')
+const courseLogo = document.querySelector('.course_logo')
 
 
 const STATE = {
@@ -76,6 +76,10 @@ window.addEventListener('pointerdown', (e) => {
   if (targetClassList?.contains('hide_onclick')) {
     window.location.href = targetElement.href
     toggleBurgerExpand()
+  }
+
+  if (targetClassList?.contains('course_logo') || targetClassList?.contains('course_logo__img')) {
+    window.location.href = 'https://rs.school/js/'
   }
 })
 
