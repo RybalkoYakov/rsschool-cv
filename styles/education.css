@@ -10,7 +10,15 @@
     aspect-ratio: 75/48;
     background-repeat: no-repeat;
     filter: grayscale(100%);
-    border-radius: 5px;
+    border-radius: .5rem;
+}
+
+.education__content:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    box-shadow: inset 0 0 10rem 8rem rgba(0,0,0, .99);
+    border-radius: .5rem;
 }
 
 .education__content div {
@@ -38,22 +46,36 @@
     .education__content p {
         font-size: 2rem;
     }
+
+    .education__content:after {
+        box-shadow: inset 0 0 8rem 6rem rgba(0,0,0, .99);
+    }
 }
 
 @media (max-width: 660px) {
     .education__content p {
         font-size: 1.5rem;
     }
+
+
 }
 
 @media (max-width: 500px) {
     .education__content p {
         font-size: 1rem;
     }
+
+    .education__content:after {
+        box-shadow: inset 0 0 5rem 4rem rgba(0,0,0, .99);
+    }
 }
 
 @media (max-width: 360px) {
     .education__content p {
         font-size: .7rem;
+    }
+
+    .education__content:after {
+        box-shadow: inset 0 0 4rem 3rem rgba(0,0,0, .99);
     }
 }

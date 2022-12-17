@@ -2,6 +2,8 @@ const navigationBurger = document.querySelector('.navigation_burger')
 const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
 const navigationBurgerExpanded = document.querySelector('.navigation_burger__expanded')
+const sprite_business = document.querySelector('.experience_content__sprite')
+
 
 const STATE = {
   burgerExpanded: false,
@@ -33,7 +35,15 @@ const SIZES = {
 }
 
 window.onload = function () {
-  setTransitionToAllNodes(0.4)
+  setTransitionToAllNodes(0.4);
+  animate({
+    node: sprite_business,
+    frames: 18,
+    frameInterval: 40,
+    path: 'url(assets/img/businessman/',
+    fileNameNoNumber: 'businessman_run_',
+    fileExtension: 'png'
+  })
 }
 
 window.addEventListener('resize', (e)=>{
@@ -131,4 +141,33 @@ function changeTheme(){
 
 function hireMe() {
   window.location.href = "mailto:RybalkoYakov@outlook.com"
+}
+
+function animate(props) {
+  const node = props.node;
+  const frames = props.frames;
+  const path = props.path;
+  const fileNameNoNumber = props.fileNameNoNumber;
+  const fileExtension = props.fileExtension;
+
+  if (!node || !frames || !path || !fileNameNoNumber || !fileExtension) {
+    throw new Error('Function animate does not receive the required parameters.')
+  }
+
+  const frameInterval = props.frameInterval || 20;
+
+  let currentFrame = 1;
+
+  setInterval(() => {
+    if (currentFrame <= 9) {
+      currentFrame = `0${currentFrame}`;
+    }
+    node.style.background = `${path}${fileNameNoNumber}${currentFrame}.${fileExtension}) no-repeat 0 0`
+    currentFrame++
+
+    if (currentFrame >= frames) {
+      currentFrame = 1;
+    }
+
+  }, frameInterval)
 }
