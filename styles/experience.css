@@ -37,3 +37,9 @@
         font-size: 1rem;
     }
 }
+
+@media (max-width: 350px) {
+    .experience_content > ul > li {
+        font-size: .7rem;
+    }
+}

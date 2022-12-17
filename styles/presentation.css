@@ -60,3 +60,9 @@
         width: 15rem;
     }
 }
+
+@media (max-width: 350px) {
+    .presentation__contacts li a {
+        font-size: 0.8rem;
+    }
+}
