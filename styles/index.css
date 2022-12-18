@@ -1,0 +1,15 @@
+@import "reset.css";
+@import "colors.css";
+@import "global.css";
+@import "fonts.css";
+
+@import "components/index.css";
+
+@import "header.css";
+@import "presentation.css";
+@import "skills.css";
+@import "code_example.css";
+@import "education.css";
+@import "experience.css";
+@import "languages.css";
+@import "footer.css";
