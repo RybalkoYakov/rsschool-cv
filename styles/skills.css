@@ -33,6 +33,18 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.skills__section > ul > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .2rem;
+}
+
+.skills__section > ul > li > img {
+    width: 25px;
+    height: 25px;
+}
+
 @media (max-width: 1350px) {
     .skills__sections {
         display: grid;
