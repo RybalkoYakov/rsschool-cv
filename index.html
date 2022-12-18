@@ -5,10 +5,276 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>CV</title>
+  <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="styles/index.css">
+  <title style="display: none">Yakov Rybalko</title>
 </head>
 <body>
+  <header>
+    <div class="header_wrapper">
+      <div class="theme">
+        <img  class="theme__theme_switch first" src="assets/img/moon_icon.svg" alt="theme">
+        <img  class="theme__theme_switch second" src="assets/img/sun_icon.svg" alt="theme">
 
+        <label class="input_switch" for="theme_type">
+          <input class="input_switch__checkbox" type="checkbox" role="switch" name="theme_type" id="theme_type">
+          <span class="input_switch__slider"></span>
+        </label>
+      </div>
+
+      <div class="navigation_burger">
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+        <div class="navigation_burger__line"></div>
+      </div>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#presentation">Contacts</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#skills">Skills</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#code_example">Code example</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#education">Education</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#experience">Experience</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#languages">Languages</a>
+            <div class="navigation__item__hover"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navigation_burger__expanded">
+      <ul>
+        <li>
+          <a class="hide_onclick" href="#presentation">Contacts</a>
+        </li>
+        <li>
+          <a class="hide_onclick" href="#skills">Skills</a>
+        </li>
+        <li>
+          <a class="hide_onclick" href="#code_example">Code example</a>
+        </li>
+        <li>
+          <a class="hide_onclick" href="#education">Education</a>
+        </li>
+        <li>
+          <a class="hide_onclick" href="#experience">Experience</a>
+        </li>
+        <li>
+          <a class="hide_onclick" href="#languages">Language</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="presentation" id="presentation">
+      <h1> &lt; Yakov Rybalko &gt; </h1>
+      <div class="presentation__wrapper">
+        <img class="presentation__img" src="assets/img/me.png" alt="my_photo">
+        <ul class="presentation__contacts">
+          <li>Contacts:</li>
+          <li>
+            <img src="assets/icons/presentation/phone.svg" alt="phone">
+            <a href="tel:+375292582264"> Phone: +375 29 2852264</a>
+          </li>
+          <li>
+            <img src="assets/icons/presentation/viber.svg" alt="viber">
+            <a href="viber://chat/?number=%2B375292582264"> Viber: Yakov</a>
+          </li>
+          <li>
+            <img src="assets/icons/presentation/email.svg" alt="email">
+            <a href="mailto:RybalkoYakovv@gmail.com">Email: RybalkoYakovv@gmail.com</a>
+          </li>
+          <li>
+            <img src="assets/icons/presentation/github.svg" alt="github">
+            <a href="https://github.com/RybalkoYakov" target="_blank"> GitHub: RybalkoYakov</a>
+          </li>
+        </ul>
+        <button type="button" role="link" id="hire_me_btn" class="btn hire_me_btn">
+          Hire me
+        </button>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2> &lt; My Skills &gt; </h2>
+      <div class="skills__sections">
+        <div class="skills__section skills_hard">
+          <h3>Hard Skills:</h3>
+          <ul>
+            <li>
+              <img src="assets/icons/skills/hard_skills/html.svg" alt="html">
+              <p>HTML</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/sass.svg" alt="sass">
+              <p>Sass</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/java_script.svg" alt="java_script">
+              <p>JS</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/type_script.svg" alt="type_script">
+              <p>TS</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/c_sharp.svg" alt="c_sharp">
+              <p>C#</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/react.svg" alt="react">
+              <p>React</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/next_js.svg" alt="next_js">
+              <p>NextJS</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/node_js.svg" alt="node_js">
+              <p>NodeJS</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/figma.svg" alt="figma">
+              <p>Figma</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/photoshop.svg" alt="photoshop">
+              <p>Photoshop</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/blender.svg" alt="blender">
+              <p>Blender</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/hard_skills/unity_3d.svg" alt="unity_3d">
+              <p>Unity</p>
+            </li>
+          </ul>
+        </div>
+        <div class="skills__section skills_soft">
+          <h3>Other Skills:</h3>
+          <ul>
+            <li>
+              <img src="assets/icons/skills/soft_skills/communication.svg" alt="communication">
+              <p>Communication</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/interpersonal_skills.svg" alt="interpersonal_skills">
+              <p>Interpersonal skills</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/adaptability.svg" alt="adaptability">
+              <p>Adaptability</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/problem_solving.svg" alt="problem_solving">
+              <p>Problem solving</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/teamwork.svg" alt="teamwork">
+              <p>Teamwork</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/creativity.svg" alt="creativity">
+              <p>Creativity</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/leadership.svg" alt="leadership">
+              <p>Leadership</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/work_ethic.svg" alt="work_ethic">
+              <p>Work ethic</p>
+            </li>
+            <li>
+              <img src="assets/icons/skills/soft_skills/attention_to_detail.svg" alt="attention_to_detail">
+              <p>Attention to details</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="code_example" id="code_example">
+      <h2>&lt; Code Example &gt;</h2>
+      <h3>Kata "Find missing element between two arrays" from codewars:</h3>
+      <code class="regular_words">
+        <span class="reserved_words">function</span> <span class="deactivated_words">findMissing</span>(arr1<span class="reserved_words">,</span> arr2) {
+          arr1 = arr1.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
+          arr2 = arr2.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
+
+          <span class="reserved_words">for</span> (<span class="reserved_words">let</span> i = <span class="number_words">0</span><span class="reserved_words">;</span> i &lt; arr1.<span class="property_words">length</span><span class="reserved_words">;</span> i++) {
+            <span class="reserved_words">if</span> (arr1[i] !== arr2[i]) {
+              <span class="reserved_words">return</span> arr1[i]
+            }
+          }
+        }
+      </code>
+    </section>
+
+    <section class="education" id="education">
+      <h2> &lt; Education &gt; </h2>
+
+      <div class="education__content">
+        <div>
+          <p>Belarusian National Technical University</p>
+          <p>Transport communication faculty</p>
+          <p>bachelor degree</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <h2> &lt; Experience &gt; </h2>
+
+      <div class="experience_content">
+        <div class="experience_content__sprite_business"></div>
+        <ul>
+          <li>
+            - Small Own Business from 2013 to 2015
+          </li>
+          <li>
+            - Geodetic Surveys Engineer(until now)
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="languages" id="languages">
+      <h2> &lt; Languages &gt; </h2>
+
+      <ul>
+        <li>- Belarusian</li>
+        <li>- Russian</li>
+        <li>- English (A2 but intensively studied)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2022 Yakov Rybalko</p>
+    <p><a href="https://github.com/RybalkoYakov" target="_blank">Github</a></p>
+    <p class="course_logo">
+      <img class="course_logo__img" src="assets/img/rs_school_js.svg" alt="course logo">
+    </p>
+  </footer>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
