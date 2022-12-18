@@ -12,6 +12,7 @@
 }
 
 .skills__section {
+    font-size: .9rem;
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -61,7 +62,7 @@
 
 @media (max-width: 580px) {
     .skills__section ul {
-        justify-items: center;
+        justify-items: flex-start;
         grid-column-gap: 2rem;
         grid-template-columns: 1fr 1fr;
     }
