@@ -10,7 +10,7 @@
 
 Phone: [+375 29 2582264](tel:+375292582264)\
 email: [RybalkoYakovv@gmail.com](mailto:RybalkoYakovv@gmail.com)\
-github: [RybalkoYakov](https://github.com/RybalkoYakov)\
+github: [RybalkoYakov](https://github.com/RybalkoYakov)
 
 ***
 
