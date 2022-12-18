@@ -79,7 +79,7 @@ window.addEventListener('pointerdown', (e) => {
   }
 
   if (targetClassList?.contains('course_logo') || targetClassList?.contains('course_logo__img')) {
-    window.location.href = 'https://rs.school/js/'
+    window.open('https://rs.school/js/')
   }
 })
 
