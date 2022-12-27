@@ -124,3 +124,9 @@ header > .header_wrapper {
         display: block;
     }
 }
+
+@media (max-width: 390px) {
+    .navigation_burger__expanded {
+        font-size: .8rem;
+    }
+}

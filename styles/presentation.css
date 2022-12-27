@@ -51,7 +51,7 @@
     padding: 1.5rem 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .presentation__wrapper {
         flex-direction: column;
         gap: 2rem;
@@ -66,6 +66,10 @@
 @media (max-width: 400px) {
     .presentation__img {
         width: 15rem;
+    }
+
+    .presentation__contacts li a {
+        font-size: 1rem;
     }
 }
 

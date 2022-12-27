@@ -3,6 +3,7 @@
     color: var(--text-main-color-dark);
     text-shadow: 0 0 1px var(--text-main-color-dark);
     scroll-behavior: smooth;
+    outline: none;
 }
 
 body {
