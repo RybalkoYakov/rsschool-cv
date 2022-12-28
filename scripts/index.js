@@ -3,8 +3,6 @@ const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
 const navigationBurgerExpanded = document.querySelector('.navigation_burger__expanded')
 const sprite_business = document.querySelector('.experience_content__sprite_business')
-const courseLogo = document.querySelector('.course_logo')
-
 
 const STATE = {
   burgerExpanded: false,
@@ -41,10 +39,11 @@ window.onload = function () {
     node: sprite_business,
     frames: 18,
     frameInterval: 50,
-    path: 'url(assets/img/businessman/',
+    path: 'assets/img/businessman/',
     fileNameNoNumber: 'businessman_run_',
     fileExtension: 'png'
-  })
+  });
+  drawImage();
 }
 
 window.addEventListener('resize', (e)=>{
@@ -167,7 +166,7 @@ function animate(props) {
     if (currentFrame <= 9) {
       currentFrame = `0${currentFrame}`;
     }
-    node.style.background = `${path}${fileNameNoNumber}${currentFrame}.${fileExtension}) no-repeat 0 0`
+    node.style.background = `url(${path}${fileNameNoNumber}${currentFrame}.${fileExtension}) no-repeat 0 0`
     currentFrame++
 
     if (currentFrame >= frames) {
@@ -175,4 +174,20 @@ function animate(props) {
     }
 
   }, frameInterval)
+}
+
+function drawImage(){
+  const canvas = document.querySelector('#author_photo')
+  const ctx = canvas.getContext('2d')
+  const image = document.querySelector('.presentation__img')
+  const CANVAS_PROPS = {
+    canvasRatio: 0.9191,
+    width: 272,
+    height: 250
+  }
+
+  canvas.width = CANVAS_PROPS.width;
+  canvas.height = CANVAS_PROPS.height;
+  ctx.drawImage(image, 0, 0, CANVAS_PROPS.width, CANVAS_PROPS.height);
+
 }
