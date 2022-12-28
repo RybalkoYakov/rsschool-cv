@@ -1,3 +1,5 @@
+import Particles from './particles/Particles.js';
+
 const navigationBurger = document.querySelector('.navigation_burger')
 const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
@@ -177,9 +179,11 @@ function animate(props) {
 }
 
 function drawImage(){
-  const canvas = document.querySelector('#author_photo')
-  const ctx = canvas.getContext('2d')
-  const image = document.querySelector('.presentation__img')
+  const canvas = document.querySelector('#author_photo');
+  const ctx = canvas.getContext('2d');
+  ctx.willReadFrequently = true;
+  const image = document.querySelector('.presentation__img');
+
   const CANVAS_PROPS = {
     canvasRatio: 0.9191,
     width: 272,
@@ -189,5 +193,12 @@ function drawImage(){
   canvas.width = CANVAS_PROPS.width;
   canvas.height = CANVAS_PROPS.height;
   ctx.drawImage(image, 0, 0, CANVAS_PROPS.width, CANVAS_PROPS.height);
+
+  const particles  = new Particles({
+    ctx,
+    canvasWidth: CANVAS_PROPS.width,
+    canvasHeight: CANVAS_PROPS.height
+  });
+
 
 }
