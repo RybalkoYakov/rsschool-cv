@@ -30,31 +30,31 @@
 
 .preloader_second {
     width: 220px;
-    border-top: 15px solid #ff9016;
+    border-top: 15px solid #ff941f;
     animation: spin_counterclockwise linear infinite 1.8s;
 }
 
 .preloader_third {
     width: 190px;
-    border-bottom: 15px solid #ff9929;
+    border-bottom: 15px solid #ff9f37;
     animation: spin_clockwise linear infinite 1.6s;
 }
 
 .preloader_fourth {
     width: 160px;
-    border-top: 15px solid #ffa03a;
+    border-top: 15px solid #fdac5a;
     animation: spin_counterclockwise linear infinite 1.4s;
 }
 
 .preloader_fives {
     width: 130px;
-    border-bottom: 15px solid #ffa649;
+    border-bottom: 15px solid #ffbd7c;
     animation: spin_clockwise linear infinite 1.2s;
 }
 
 .preloader_sixes {
     width: 100px;
-    border-top: 15px solid #ffaf5e;
+    border-top: 15px solid #ffd4a8;
     animation: spin_counterclockwise linear infinite 1s;
 }
 

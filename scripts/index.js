@@ -86,7 +86,7 @@ function hideSpinner() {
   spinner.style.opacity = '0';
   setTimeout(() => {
     spinner.style.display = 'none';
-  }, 400)
+  }, 200)
 }
 
 function toggleNavigationMenu(hide_bool){
