@@ -80,14 +80,13 @@ window.addEventListener('pointerdown', (e) => {
     window.location.href = targetElement.href
     toggleBurgerExpand()
   }
-
-  if (targetClassList?.contains('course_logo') || targetClassList?.contains('course_logo__img')) {
-    window.open('https://rs.school/js/')
-  }
 })
 
 function hideSpinner() {
-  spinner.style.display = 'none';
+  spinner.style.opacity = '0';
+  setTimeout(() => {
+    spinner.style.display = 'none';
+  }, 400)
 }
 
 function toggleNavigationMenu(hide_bool){
