@@ -10,6 +10,15 @@
   <title>Yakov Rybalko</title>
 </head>
 <body>
+  <div class="preloader">
+    <div class="preloader_circle preloader_first"></div>
+    <div class="preloader_circle preloader_second"></div>
+    <div class="preloader_circle preloader_third"></div>
+    <div class="preloader_circle preloader_fourth"></div>
+    <div class="preloader_circle preloader_fives"></div>
+    <div class="preloader_circle preloader_sixes"></div>
+  </div>
+
   <header>
     <div class="header_wrapper">
       <div class="theme">
@@ -282,5 +291,9 @@
     </p>
   </footer>
   <script type="module" src="scripts/index.js"></script>
+
+  <script>
+    document.querySelector('.preloader').style.display = 'none'
+  </script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader_circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 250px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 15px solid #000000;
+}
+
+.preloader_first {
+    border-top: 15px solid #FF0000FF;
+    animation: spin_clockwise linear infinite 2s;
+}
+
+.preloader_second {
+    width: 220px;
+    border-top: 15px solid #ff2222;
+    animation: spin_counterclockwise linear infinite 1.8s;
+}
+
+.preloader_third {
+    width: 190px;
+    border-bottom: 15px solid #ff4f4f;
+    animation: spin_clockwise linear infinite 1.6s;
+}
+
+.preloader_fourth {
+    width: 160px;
+    border-top: 15px solid #ff7575;
+    animation: spin_counterclockwise linear infinite 1.4s;
+}
+
+.preloader_fives {
+    width: 130px;
+    border-bottom: 15px solid #ff9999;
+    animation: spin_clockwise linear infinite 1.2s;
+}
+
+.preloader_sixes {
+    width: 100px;
+    border-top: 15px solid #ffb3b3;
+    animation: spin_counterclockwise linear infinite 1s;
+}
+
+@keyframes spin_clockwise {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(0);
+    }
+
+    30% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(40deg);
+    }
+
+    70% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(320deg);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotatez(360deg);
+    }
+}
+
+@keyframes spin_counterclockwise {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(0);
+    }
+
+    30% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(-40deg);
+    }
+
+    70% {
+        transform: translateX(-50%) translateY(-50%) rotateZ(-320deg);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotatez(-360deg);
+    }
+}

@@ -181,7 +181,6 @@ function animate(props) {
 function drawImage(){
   const canvas = document.querySelector('#author_photo');
   const ctx = canvas.getContext('2d');
-  ctx.willReadFrequently = true;
   const image = document.querySelector('.presentation__img');
 
   const CANVAS_PROPS = {
