@@ -1,4 +1,4 @@
-import Particles from './particles/Particles.js';
+import HTMLParticlesBundler from "./particles/HTMLParticlesBundler.js";
 
 const navigationBurger = document.querySelector('.navigation_burger')
 const navigation = document.querySelector('.navigation')
@@ -185,25 +185,14 @@ function animate(props) {
 
 function drawImage(){
   const canvas = document.querySelector('#author_photo');
-  const ctx = canvas.getContext('2d');
   const image = document.querySelector('.presentation__img');
-
   const CANVAS_PROPS = {
     canvasRatio: 0.9191,
     width: 272,
-    height: 250
-  }
-
-  canvas.width = CANVAS_PROPS.width;
-  canvas.height = CANVAS_PROPS.height;
-  ctx.drawImage(image, 0, 0, CANVAS_PROPS.width, CANVAS_PROPS.height);
-
-  const particles  = new Particles({
-    ctx,
-    canvasWidth: CANVAS_PROPS.width,
-    canvasHeight: CANVAS_PROPS.height,
+    height: 250,
     pixelSize: 1
-  });
-
-  particles.draw();
+  }
+  const htmlParticlesBundler = new HTMLParticlesBundler(canvas, image, CANVAS_PROPS)
+  htmlParticlesBundler.particles.draw();
 }
+
