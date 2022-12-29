@@ -35,6 +35,11 @@ const SIZES = {
   hideNavigation: 1000,
 }
 
+// SPINNER //
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.preloader').style.display = 'none'
+})
+
 window.onload = function () {
   setTransitionToAllNodes(0.4);
   animate({
