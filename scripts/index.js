@@ -197,8 +197,9 @@ function drawImage(){
   const particles  = new Particles({
     ctx,
     canvasWidth: CANVAS_PROPS.width,
-    canvasHeight: CANVAS_PROPS.height
+    canvasHeight: CANVAS_PROPS.height,
+    pixelSize: 1
   });
 
-
+  particles.draw();
 }
