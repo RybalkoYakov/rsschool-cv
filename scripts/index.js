@@ -5,6 +5,7 @@ const navigation = document.querySelector('.navigation')
 const header = document.querySelector('header')
 const navigationBurgerExpanded = document.querySelector('.navigation_burger__expanded')
 const sprite_business = document.querySelector('.experience_content__sprite_business')
+const spinner = document.querySelector('.preloader');
 
 const STATE = {
   burgerExpanded: false,
@@ -35,11 +36,6 @@ const SIZES = {
   hideNavigation: 1000,
 }
 
-// SPINNER //
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.preloader').style.display = 'none'
-})
-
 window.onload = function () {
   setTransitionToAllNodes(0.4);
   animate({
@@ -51,6 +47,7 @@ window.onload = function () {
     fileExtension: 'png'
   });
   drawImage();
+  hideSpinner();
 }
 
 window.addEventListener('resize', (e)=>{
@@ -88,6 +85,10 @@ window.addEventListener('pointerdown', (e) => {
     window.open('https://rs.school/js/')
   }
 })
+
+function hideSpinner() {
+  spinner.style.display = 'none';
+}
 
 function toggleNavigationMenu(hide_bool){
   if (hide_bool) {
