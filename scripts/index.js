@@ -72,10 +72,6 @@ window.addEventListener('pointerdown', (e) => {
     changeTheme()
   }
 
-  if (targetClassList?.contains('hire_me_btn')) {
-    hireMe()
-  }
-
   if (targetClassList?.contains('hide_onclick')) {
     window.location.href = targetElement.href
     toggleBurgerExpand()
@@ -148,10 +144,6 @@ function changeTheme(){
     header.querySelector('.second').style.display = DISPLAY.block
     STATE.isDarkTheme = true
   }
-}
-
-function hireMe() {
-  window.location.href = "mailto:RybalkoYakov@outlook.com"
 }
 
 function animate(props) {

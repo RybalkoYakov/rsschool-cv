@@ -7,6 +7,9 @@
     background-color: transparent;
     font-size: 16px;
     text-shadow: 0 0 2px var(--text-main-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
