@@ -229,16 +229,19 @@
 
     <section class="code_example" id="code_example">
       <h2>&lt; Code <span style="white-space: nowrap">Example /&gt;</span></h2>
-      <h3>Kata "Find missing element between two arrays" from codewars:</h3>
+      <h3>Just simple JS code from my head:</h3>
       <code class="regular_words">
-        <span class="reserved_words">function</span> <span class="deactivated_words">findMissing</span>(arr1<span class="reserved_words">,</span> arr2) {
-          arr1 = arr1.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
-          arr2 = arr2.<span class="method_invoked">sort</span>((a<span class="reserved_words">,</span> b) => a - b)
+        <span class="reserved_words">function</span> <span class="deactivated_words">IAmWorking</span>(cash) {
+          <span class="reserved_words">const</span> currency = <span class="string_words">'Star_Units'</span><span class="reserved_words">;</span>
+          <span class="reserved_words">const</span> expectedCash = <span class="number_words">1000000</span><span class="reserved_words">;</span>
+          <span class="reserved_words">const</span> amIHappy = cash >= expectedCash<span class="reserved_words">;</span>
 
-          <span class="reserved_words">for</span> (<span class="reserved_words">let</span> i = <span class="number_words">0</span><span class="reserved_words">;</span> i &lt; arr1.<span class="property_words">length</span><span class="reserved_words">;</span> i++) {
-            <span class="reserved_words">if</span> (arr1[i] !== arr2[i]) {
-              <span class="reserved_words">return</span> arr1[i]
-            }
+          <span class="reserved_words">if</span> (amIHappy === <span class="reserved_words">true</span>) {
+            console.<span class="method_invoked_words">info</span>(<span class="string_words">'I</span><span class="reserved_words">\'</span><span class="string_words" >m glad to work with you guys'</span>)<span class="reserved_words">;</span>
+            <span class="reserved_words">return</span> `${cash * <span class="number_words">2</span>} ${currency}`<span class="reserved_words">;</span>
+          } <span class="reserved_words">else</span> {
+            console.<span class="method_invoked_words">error</span>(<span class="string_words" >'Good by! Don</span><span class="reserved_words">\'</span><span class="string_words">t be sick 💩'</span>)<span class="reserved_words">;</span>
+            <span class="reserved_words">return null</span><span class="reserved_words">;</span>
           }
         }
       </code>

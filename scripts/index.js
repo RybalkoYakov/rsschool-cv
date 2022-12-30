@@ -195,4 +195,3 @@ function drawImage(){
   const htmlParticlesBundler = new HTMLParticlesBundler(canvas, image, CANVAS_PROPS)
   htmlParticlesBundler.particles.draw();
 }
-

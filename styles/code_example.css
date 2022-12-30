@@ -39,14 +39,26 @@
     color: #0057ef;
 }
 
+.string_words {
+    color: #1c5d19;
+}
+
+@media (max-width: 620px) {
+    .code_example code {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+}
+
+
 @media (max-width: 500px) {
     .code_example h3 {
         font-size: 1rem;
     }
 
     .code_example code {
-        font-size: 0.7rem;
-        line-height: 1.2rem;
+        font-size: 0.55rem;
+        line-height: 1rem;
     }
 }
 
@@ -58,5 +70,11 @@
     .code_example code {
         font-size: 0.5rem;
         line-height: .9rem;
+    }
+}
+
+@media (max-width: 330px) {
+    .code_example code {
+        font-size: 0.45rem;
     }
 }
