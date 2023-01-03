@@ -54,9 +54,9 @@ window.addEventListener('resize', (e)=>{
   let width = e.target.innerWidth;
 
   if (width < SIZES.hideNavigation) {
-    toggleNavigationMenu(true)
+    hideNavigationMenu(true)
   } else {
-    toggleNavigationMenu(false)
+    hideNavigationMenu(false)
   }
 })
 
@@ -85,24 +85,36 @@ function hideSpinner() {
   }, 200)
 }
 
-function toggleNavigationMenu(hide_bool){
+function hideNavigationMenu(hide_bool){
   if (hide_bool) {
-    navigationBurger.style.display = DISPLAY.block
-    navigation.style.display = DISPLAY.none
+    navigationBurger.style.display = DISPLAY.block;
+    navigation.style.display = DISPLAY.none;
   } else {
-    navigationBurger.style.display = DISPLAY.none
-    navigation.style.display = DISPLAY.block
-    navigationBurgerExpanded.style.display = DISPLAY.none
+    navigationBurger.style.display = DISPLAY.none;
+    navigation.style.display = DISPLAY.block;
+    navigationBurgerExpanded.style.display = DISPLAY.none;
   }
 }
 
 function toggleBurgerExpand(){
+  const lines = navigationBurger.querySelectorAll('.navigation_burger__line')
+
   if (STATE.burgerExpanded) {
+    lines[1].style.display = DISPLAY.block
+    lines[2].style.display = DISPLAY.block
+    lines[0].style.transform = 'rotateZ(0)'
+    lines[3].style.transform = 'rotateZ(0)'
+
     header.style.height = ''
     header.style.alignItems = 'center'
     STATE.burgerExpanded = false
     navigationBurgerExpanded.style.display = DISPLAY.none
   } else {
+    lines[1].style.display = DISPLAY.none
+    lines[2].style.display = DISPLAY.none
+    lines[0].style.transform = 'rotateZ(45deg) translateY(5px) translateX(8px)'
+    lines[3].style.transform = 'rotateZ(-45deg) translateY(-5px) translateX(8px)'
+
     header.style.height = SIZES.fullScreenHeight
     header.style.alignItems = 'flex-start'
     STATE.burgerExpanded = true
