@@ -29,7 +29,6 @@
     width: 111px;
     height: 140px;
     transform: rotateY(180deg);
-    background: url(../assets/img/businessman/businessman_run_01.png) no-repeat 0 0;
 }
 
 @media (max-width: 520px) {

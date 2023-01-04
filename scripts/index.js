@@ -19,6 +19,7 @@ const STORE = {
 const THEME_COLOR_NAMES = {
   bg: '--theme-bg-color-dark',
   text: '--text-main-color-dark',
+  shadow: '--box-shadow-color'
 }
 
 const TAG_NAMES = {
@@ -133,7 +134,6 @@ function toggleBurgerExpand(){
     lines[2].style.transform = 'rotateZ(45deg)'
     lines[3].style.transform = 'rotateZ(-45deg)'
 
-
     header.style.height = SIZES.fullScreenHeight
     header.style.alignItems = 'flex-start'
     STATE.burgerExpanded = true
@@ -163,14 +163,17 @@ function changeTheme(){
   const root = document.querySelector(':root')
 
   if (STATE.isDarkTheme) {
-    root.style.setProperty(THEME_COLOR_NAMES.bg,'#ffffff')
-    root.style.setProperty(THEME_COLOR_NAMES.text,'#000000')
+    root.style.setProperty(THEME_COLOR_NAMES.bg,'rgba(255,255,255, .99)')
+    root.style.setProperty(THEME_COLOR_NAMES.text,'rgba(0,0,0, .99)')
+    root.style.setProperty(THEME_COLOR_NAMES.shadow, 'rgba(255,255,255, .5)')
     header.querySelector('.first').style.display = DISPLAY.block
     header.querySelector('.second').style.display = DISPLAY.none
     STATE.isDarkTheme = false
   } else {
-    root.style.setProperty(THEME_COLOR_NAMES.bg,'#000000')
-    root.style.setProperty(THEME_COLOR_NAMES.text,'#ffffff')
+    root.style.setProperty(THEME_COLOR_NAMES.bg,'rgba(0,0,0, .99)')
+    root.style.setProperty(THEME_COLOR_NAMES.text,'rgba(255,255,255, .99)')
+    root.style.setProperty(THEME_COLOR_NAMES.shadow, 'rgba(0,0,0, .5)')
+
     header.querySelector('.first').style.display = DISPLAY.none
     header.querySelector('.second').style.display = DISPLAY.block
     STATE.isDarkTheme = true
@@ -184,7 +187,8 @@ function downloadImages(props) {
     if (i <= 9) {
       i = `0${i}`;
     }
-    const image = new Image(imageSize.width, imageSize.height);
+    const image = new Image(imageSize.width, imageSize.height)
+    image.style.backgroundColor = "transparent"
     image.src = `${props.path}${props.fileNameNoNumber}${i}.${props.fileExtension}`
     STORE.experienceImage.push(image)
   }
@@ -215,7 +219,6 @@ function animate(props) {
     if (currentFrame >= frames) {
       currentFrame = 1;
     }
-
   }, frameInterval)
 }
 
@@ -231,4 +234,3 @@ function drawImage(){
   const htmlParticlesBundler = new HTMLParticlesBundler(canvas, image, CANVAS_PROPS)
   htmlParticlesBundler.particles.draw();
 }
-

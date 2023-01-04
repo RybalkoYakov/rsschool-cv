@@ -22,9 +22,10 @@ export default class Particles {
     this.#ctx = props.ctx;
     this.#canvasWidth = props.canvasWidth;
     this.#canvasHeight = props.canvasHeight;
-    const {data} = props.ctx.getImageData(0,0, props.canvasWidth, props.canvasHeight)
-    const {width} = props.ctx.getImageData(0,0, props.canvasWidth, props.canvasHeight)
-    const {height} = props.ctx.getImageData(0,0, props.canvasWidth, props.canvasHeight)
+    const imageData = props.ctx.getImageData(0,0, props.canvasWidth, props.canvasHeight)
+    const {data} = imageData
+    const {width} = imageData
+    const {height} = imageData
 
     for (let y = 0; y < height; y += this.#pixelSize) {
       for (let x = 0; x < width;x += this.#pixelSize) {
