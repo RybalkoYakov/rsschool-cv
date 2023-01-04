@@ -20,41 +20,47 @@
     width: 250px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 15px solid #000000;
+    border: 15px solid transparent;
 }
 
 .preloader_first {
-    border-top: 15px solid #ff8500;
+    filter: brightness(1.6) saturate(1);
+    border-top: 15px solid var(--section-line-color);
     animation: spin_clockwise linear infinite 2s;
 }
 
 .preloader_second {
+    filter: brightness(1.4) saturate(.9);
     width: 220px;
-    border-top: 15px solid #ff941f;
+    border-top: 15px solid var(--section-line-color);
     animation: spin_counterclockwise linear infinite 1.8s;
 }
 
 .preloader_third {
+    filter: brightness(1.2) saturate(.8);
     width: 190px;
-    border-bottom: 15px solid #ff9f37;
+    border-bottom: 15px solid var(--section-line-color);
     animation: spin_clockwise linear infinite 1.6s;
 }
 
 .preloader_fourth {
+    filter: brightness(1) saturate(.7);
     width: 160px;
-    border-top: 15px solid #fdac5a;
+    border-top: 15px solid var(--section-line-color);
     animation: spin_counterclockwise linear infinite 1.4s;
 }
 
 .preloader_fives {
+    filter: brightness(.8) saturate(.6);
     width: 130px;
-    border-bottom: 15px solid #ffbd7c;
+    border-bottom: 15px solid var(--section-line-color);
     animation: spin_clockwise linear infinite 1.2s;
 }
 
 .preloader_sixes {
+    filter: brightness(.6) saturate(.5);
     width: 100px;
-    border-top: 15px solid #ffd4a8;
+    border-top: 15px solid var(--section-line-color);
     animation: spin_counterclockwise linear infinite 1s;
 }
 
@@ -97,73 +103,73 @@
 @media (max-width: 1000px) {
     .preloader_circle {
         width: 180px;
-        border: 10px solid #000000;
+        border: 10px solid transparent;
     }
 
     .preloader_first {
-        border-top: 10px solid #ff8500;
+        border-top: 10px solid var(--section-line-color);
     }
 
     .preloader_second {
         width: 160px;
-        border-top: 10px solid #ff941f;
+        border-top: 10px solid var(--section-line-color);
     }
 
     .preloader_third {
         width: 140px;
-        border-bottom: 10px solid #ff9f37;
+        border-bottom: 10px solid var(--section-line-color);
 
     }
 
     .preloader_fourth {
         width: 120px;
-        border-top: 10px solid #fdac5a;
+        border-top: 10px solid var(--section-line-color);
     }
 
     .preloader_fives {
         width: 100px;
-        border-bottom: 10px solid #ffbd7c;
+        border-bottom: 10px solid var(--section-line-color);
     }
 
     .preloader_sixes {
         width: 80px;
-        border-top: 10px solid #ffd4a8;
+        border-top: 10px solid var(--section-line-color);
     }
 }
 
 @media (max-width: 600px) {
     .preloader_circle {
         width: 80px;
-        border: 5px solid #000000;
+        border: 5px solid transparent;
     }
 
     .preloader_first {
-        border-top: 5px solid #ff8500;
+        border-top: 5px solid var(--section-line-color);
     }
 
     .preloader_second {
         width: 70px;
-        border-top: 5px solid #ff941f;
+        border-top: 5px solid var(--section-line-color);
     }
 
     .preloader_third {
         width: 60px;
-        border-bottom: 5px solid #ff9f37;
+        border-bottom: 5px solid var(--section-line-color);
 
     }
 
     .preloader_fourth {
         width: 50px;
-        border-top: 5px solid #fdac5a;
+        border-top: 5px solid var(--section-line-color);
     }
 
     .preloader_fives {
         width: 40px;
-        border-bottom: 5px solid #ffbd7c;
+        border-bottom: 5px solid var(--section-line-color);
     }
 
     .preloader_sixes {
         width: 30px;
-        border-top: 5px solid #ffd4a8;
+        border-top: 5px solid var(--section-line-color);
     }
 }

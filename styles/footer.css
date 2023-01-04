@@ -1,5 +1,5 @@
 .footer {
-    border-top: 2px solid #8f4b04;
+    border-top: 2px solid var(--section-line-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
