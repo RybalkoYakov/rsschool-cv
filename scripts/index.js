@@ -12,6 +12,10 @@ const STATE = {
   isDarkTheme: true
 }
 
+const STORE = {
+  experienceImage: []
+}
+
 const THEME_COLOR_NAMES = {
   bg: '--theme-bg-color-dark',
   text: '--text-main-color-dark',
@@ -44,7 +48,11 @@ window.onload = function () {
     frameInterval: 50,
     path: 'assets/img/businessman/',
     fileNameNoNumber: 'businessman_run_',
-    fileExtension: 'png'
+    fileExtension: 'png',
+    imageSize: {
+      width: 111,
+      height: 140
+    }
   });
   drawImage();
   hideSpinner();
@@ -100,9 +108,14 @@ function toggleBurgerExpand(){
   const lines = navigationBurger.querySelectorAll('.navigation_burger__line')
 
   if (STATE.burgerExpanded) {
-    lines[1].style.display = DISPLAY.block
-    lines[2].style.display = DISPLAY.block
+    lines[0].style.top = '20%'
+    lines[1].style.top = '40%'
+    lines[2].style.top = '60%'
+    lines[3].style.top = '80%'
+
     lines[0].style.transform = 'rotateZ(0)'
+    lines[1].style.transform = 'rotateZ(0)'
+    lines[2].style.transform = 'rotateZ(0)'
     lines[3].style.transform = 'rotateZ(0)'
 
     header.style.height = ''
@@ -110,10 +123,16 @@ function toggleBurgerExpand(){
     STATE.burgerExpanded = false
     navigationBurgerExpanded.style.display = DISPLAY.none
   } else {
-    lines[1].style.display = DISPLAY.none
-    lines[2].style.display = DISPLAY.none
-    lines[0].style.transform = 'rotateZ(45deg) translateY(5px) translateX(8px)'
-    lines[3].style.transform = 'rotateZ(-45deg) translateY(-5px) translateX(8px)'
+    lines[0].style.top = '50%'
+    lines[1].style.top = '50%'
+    lines[2].style.top = '50%'
+    lines[3].style.top = '50%'
+
+    lines[0].style.transform = 'rotateZ(45deg)'
+    lines[1].style.transform = 'rotateZ(-45deg)'
+    lines[2].style.transform = 'rotateZ(45deg)'
+    lines[3].style.transform = 'rotateZ(-45deg)'
+
 
     header.style.height = SIZES.fullScreenHeight
     header.style.alignItems = 'flex-start'
@@ -158,6 +177,19 @@ function changeTheme(){
   }
 }
 
+function downloadImages(props) {
+  const {imageSize} = props
+
+  for (let i = 1; i <= props.frames; i++) {
+    if (i <= 9) {
+      i = `0${i}`;
+    }
+    const image = new Image(imageSize.width, imageSize.height);
+    image.src = `${props.path}${props.fileNameNoNumber}${i}.${props.fileExtension}`
+    STORE.experienceImage.push(image)
+  }
+}
+
 function animate(props) {
   const node = props.node;
   const frames = props.frames;
@@ -173,11 +205,11 @@ function animate(props) {
 
   let currentFrame = 1;
 
+  downloadImages(props);
+
   setInterval(() => {
-    if (currentFrame <= 9) {
-      currentFrame = `0${currentFrame}`;
-    }
-    node.style.background = `url(${path}${fileNameNoNumber}${currentFrame}.${fileExtension}) no-repeat 0 0`
+    node.textContent = ""
+    node.appendChild(STORE.experienceImage[currentFrame])
     currentFrame++
 
     if (currentFrame >= frames) {
@@ -191,7 +223,7 @@ function drawImage(){
   const canvas = document.querySelector('#author_photo');
   const image = document.querySelector('.presentation__img');
   const CANVAS_PROPS = {
-    canvasRatio: 0.9191,
+    aspectRatio: 0.9191,
     width: 272,
     height: 250,
     pixelSize: 1
@@ -199,3 +231,4 @@ function drawImage(){
   const htmlParticlesBundler = new HTMLParticlesBundler(canvas, image, CANVAS_PROPS)
   htmlParticlesBundler.particles.draw();
 }
+
