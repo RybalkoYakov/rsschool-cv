@@ -3,6 +3,7 @@ export default class Pointer {
   #y = null;
   #rect = null;
   #targetObjectID = null;
+  interactionRadius = 5000;
 
   constructor(targetObject) {
     this.#targetObjectID = targetObject || null
@@ -11,7 +12,11 @@ export default class Pointer {
 
   #init() {
     window.addEventListener('pointermove', (e) => {
-      if (e.target.id !== this.#targetObjectID) return
+      if (e.target.id !== this.#targetObjectID) {
+        this.#x = null;
+        this.#y = null;
+        this.#rect = null;
+      }
 
       this.#rect = e.target.getBoundingClientRect();
       this.#x = Math.floor(e.clientX - this.#rect.left);
@@ -29,12 +34,5 @@ export default class Pointer {
 
   get y() {
     return this.#y;
-  }
-
-  getCoordinates() {
-    return {
-      x: this.#x,
-      y: this.#y
-    }
   }
 }

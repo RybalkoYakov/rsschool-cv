@@ -217,10 +217,10 @@ function drawImage(){
     aspectRatio: 0.9191,
     width: 272,
     height: 250,
-    pixelSize: 1
+    pixelSize: 2
   }
   htmlParticlesBundler = new HTMLParticlesBinder(canvas, image, CANVAS_PROPS)
-  htmlParticlesBundler.particles.draw();
+
 }
 
 async function Start() {
@@ -243,6 +243,8 @@ async function Start() {
 }
 
 function Update(){
+  htmlParticlesBundler.particles.draw();
+  htmlParticlesBundler.particles.update();
 
-   requestAnimationFrame(Update)
+  requestAnimationFrame(Update)
 }

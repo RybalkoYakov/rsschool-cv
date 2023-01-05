@@ -44,7 +44,7 @@ export default class Particles {
         const blue = data[index + 2]
         const alpha = data[index + 3]
 
-        const particle = new Particle({red,green,blue,alpha,x,y,ctx:props.ctx, pixelSize: this.#pixelSize});
+        const particle = new Particle({red,green,blue,alpha,x,y,ctx:props.ctx, pixelSize: this.#pixelSize, particlesObj: this});
         this.#addParticle(particle)
       }
     }
@@ -53,5 +53,9 @@ export default class Particles {
   draw(){
     this.#ctx.clearRect(0,0, this.#canvasWidth, this.#canvasHeight)
     this.#particles.forEach(particle => particle.draw())
+  }
+
+  update(){
+    this.#particles.forEach(particle => particle.update())
   }
 }
