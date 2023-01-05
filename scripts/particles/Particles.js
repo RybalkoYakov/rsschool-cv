@@ -6,11 +6,20 @@ export default class Particles {
   #ctx
   #canvasWidth
   #canvasHeight
+  #pointer
 
   constructor(props) {
     const {pixelSize} = props;
     this.#pixelSize = pixelSize || this.#pixelSize;
     this.#init(props);
+  }
+
+  get pointer() {
+    return this.#pointer;
+  }
+
+  set pointer(value) {
+    this.#pointer = value;
   }
 
   #addParticle (particle) {

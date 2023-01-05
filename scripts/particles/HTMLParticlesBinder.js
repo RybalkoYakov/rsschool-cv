@@ -1,6 +1,7 @@
 import Particles from "./Particles.js";
+import Pointer from "./Pointer.js";
 
-export default class HTMLParticlesBundler {
+export default class HTMLParticlesBinder {
   #canvas
   #image
   #canvasProps
@@ -26,5 +27,7 @@ export default class HTMLParticlesBundler {
       canvasHeight: this?.#canvasProps?.height || 250,
       pixelSize: this?.#canvasProps?.pixelSize || 1
     });
+
+    this.particles.pointer = new Pointer('author_photo')
   }
 }

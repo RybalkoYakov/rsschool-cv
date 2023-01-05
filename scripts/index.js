@@ -1,4 +1,4 @@
-import HTMLParticlesBundler from "./particles/HTMLParticlesBundler.js";
+import HTMLParticlesBinder from "./particles/HTMLParticlesBinder.js";
 
 const navigationBurger = document.querySelector('.navigation_burger')
 const navigation = document.querySelector('.navigation')
@@ -41,22 +41,10 @@ const SIZES = {
   hideNavigation: 1000,
 }
 
-window.onload = function () {
-  setTransitionToAllNodes(0.4);
-  animate({
-    node: sprite_business,
-    frames: 18,
-    frameInterval: 50,
-    path: 'assets/img/businessman/',
-    fileNameNoNumber: 'businessman_run_',
-    fileExtension: 'png',
-    imageSize: {
-      width: 111,
-      height: 140
-    }
-  });
-  drawImage();
-  hideSpinner();
+let htmlParticlesBundler = null;
+
+window.onload = async function afterLoadPage() {
+  await Start();
 }
 
 window.addEventListener('resize', (e)=>{
@@ -231,6 +219,30 @@ function drawImage(){
     height: 250,
     pixelSize: 1
   }
-  const htmlParticlesBundler = new HTMLParticlesBundler(canvas, image, CANVAS_PROPS)
+  htmlParticlesBundler = new HTMLParticlesBinder(canvas, image, CANVAS_PROPS)
   htmlParticlesBundler.particles.draw();
+}
+
+async function Start() {
+  setTransitionToAllNodes(0.4);
+  animate({
+    node: sprite_business,
+    frames: 18,
+    frameInterval: 50,
+    path: 'assets/img/businessman/',
+    fileNameNoNumber: 'businessman_run_',
+    fileExtension: 'png',
+    imageSize: {
+      width: 111,
+      height: 140
+    }
+  });
+  drawImage();
+  await hideSpinner();
+  Update();
+}
+
+function Update(){
+
+   requestAnimationFrame(Update)
 }

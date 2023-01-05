@@ -26,4 +26,6 @@ export default class Particle {
     this.#ctx.fillStyle = this.#pixelInitialColor;
     this.#ctx.fillRect(this.#x, this.#y, this.#pixelSize, this.#pixelSize)
   }
+
+  
 }
