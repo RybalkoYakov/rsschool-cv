@@ -41,7 +41,7 @@ const SIZES = {
   hideNavigation: 1000,
 }
 
-let htmlParticlesBundler = null;
+let htmlParticlesBinder = null;
 
 window.onload = async function afterLoadPage() {
   await Start();
@@ -219,7 +219,7 @@ function drawImage(){
     height: 250,
     pixelSize: 2
   }
-  htmlParticlesBundler = new HTMLParticlesBinder(canvas, image, CANVAS_PROPS)
+  htmlParticlesBinder = new HTMLParticlesBinder(canvas, image, CANVAS_PROPS)
 
 }
 
@@ -243,8 +243,8 @@ async function Start() {
 }
 
 function Update(){
-  htmlParticlesBundler.particles.draw();
-  htmlParticlesBundler.particles.update();
+  htmlParticlesBinder.particles.draw();
+  htmlParticlesBinder.particles.update();
 
   requestAnimationFrame(Update)
 }

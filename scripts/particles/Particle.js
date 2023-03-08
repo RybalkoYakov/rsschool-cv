@@ -2,7 +2,6 @@ export default class Particle {
   // Link to particle owner
   #particlesObj = null
 
-
   // Data for color and pixel position
   #pixelInitialColor = null
   #red = null

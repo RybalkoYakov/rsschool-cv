@@ -37,7 +37,7 @@ export default class Particles {
     const {height} = imageData
 
     for (let y = 0; y < height; y += this.#pixelSize) {
-      for (let x = 0; x < width;x += this.#pixelSize) {
+      for (let x = 0; x < width; x += this.#pixelSize) {
         const index = (width * y + x) * 4
         const red = data[index]
         const green = data[index + 1]
